@@ -1,0 +1,24 @@
+{
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "description": "Home work 3.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Khytko",
+  "license": "ISC"
+}
+
+ "devDependencies": {
+		"@types/node": "^16.11.10",
+		"ava": "^3.15.0",
+		"c8": "^7.10.0",
+		"color-convert": "^2.0.1",
+		"execa": "^6.0.0",
+		"log-update": "^5.0.0",
+		"matcha": "^0.7.0",
+		"tsd": "^0.19.0",
+		"xo": "^0.53.0",
+		"yoctodelay": "^2.0.0"
+	},
