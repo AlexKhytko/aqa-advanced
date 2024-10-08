@@ -7,7 +7,7 @@
 let pi = Math.PI;
 let radius = 12;
 let circle = pi * (radius * radius);
-console.log(circle)
+console.log((circle).toFixed(2));
 
 let length = (radius / 3) * 2;
 let wight = (length / 4)* 2;
