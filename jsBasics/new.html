@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h2>Регистрация</h2>
+    <form id="registrationForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" required><br><br>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required><br><br>
+        
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Простая валидация
+            if (username.length < 3) {
+                document.getElementById('message').textContent = 'Логин должен быть не менее 3 символов.';
+                return;
+            }
+
+            if (password.length < 6) {
+                document.getElementById('message').textContent = 'Пароль должен быть не менее 6 символов.';
+                return;
+            }
+
+            // Здесь можно добавить код для отправки данных на сервер
+
+            document.getElementById('message').textContent = 'Регистрация успешна!';
+        });
+    </script>
+</body>
+</html>

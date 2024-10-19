@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        #result {
+            margin-top: 80px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Калькулятор</h1>
+    <div id="result"></div>
+    <script>
+        function calculator() {
+            let a = parseFloat(prompt("Введите первое число:"));
+            let operator = prompt("Введите оператор (+, -, *, /):");
+            let b = parseFloat(prompt("Введите второе число:"));
+            let result;
+            let output = document.getElementById("result");
+
+            if (operator === "/") {
+                if (b === 0) {
+                    output.textContent = "Ошибка: Деление на ноль не допускается.";
+                    return;
+                }
+                result = a / b;
+                output.textContent = "Результат деления: " + result;
+            } else if (operator === "+") {
+                result = a + b;
+                output.textContent = "Сумма: " + result;
+            } else if (operator === "-") {
+                result = a - b;
+                output.textContent = "Разность: " + result;
+            } else if (operator === "*") {
+                result = a * b;
+                output.textContent = "Произведение: " + result;
+            } else {
+                output.textContent = "Ошибка: Неверный оператор.";
+            }
+        }
+
+        calculator();
+    </script>
+</body>
+</html>
