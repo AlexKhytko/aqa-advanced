@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data Example</title>
+</head>
+<body>
+    <h1>Test credit7.ua</h1>
+    <div id="results"></div>
+
+    <script>
+        function fetchData(url, callback) {
+            const startTime = performance.now(); // Время начала
+            fetch(url)
+                .then(response => {
+                    const status = response.status;
+                    const endTime = performance.now(); // Время окончания
+                    const loadingTime = endTime - startTime; // Время загрузки
+                    console.log(`URL: ${url} | Status: ${status} | Loading Time: ${loadingTime.toFixed(2)} ms`);
+
+                    return response.json(); // Переход к следующим данным
+                })
+                .then(data => {
+                    callback(data);
+                })
+                .catch(error => console.error('Ошибка:', error));
+        }
+
+        const urls = [
+            'https://credit7.ua/',
+            'https://credit7.ua/jak-vzjati-kredit/',
+            'https://credit7.ua/kredytni-produkty/',
+            'https://credit7.ua/yak-splatiti/',
+            'https://credit7.ua/pro-nas/',
+            'https://credit7.ua/news/',
+            'https://credit7.ua/client/login',
+            'https://credit7.ua/s/payment',
+            'https://credit7.ua/akcii/zyma_blyzko/'
+        ];
+
+        urls.forEach(url => {
+            fetchData(url, data => {
+                // Здесь вы можете обработать данные, если это необходимо
+                output.textContent = (data); // Выводим данные в браузер
+            });
+        });
+    </script>
+</body>
+</html>

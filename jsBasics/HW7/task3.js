@@ -16,5 +16,5 @@ finally {return "Calculation done"}
 }
 console.log(divide(600, 150));
 console.log(divide(6, 0));
-console.log(divide("ddd", 1));
-console.log(divide(6, "aaa"));
+console.log(divide("пять", 1));
+console.log(divide(6, "два"));
