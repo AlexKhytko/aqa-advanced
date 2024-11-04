@@ -9,6 +9,6 @@ return average;
 
 }
 
-console.log(getNumbersAverage(12, 5, 20, 8, 15, 0, 25));
+//console.log(getNumbersAverage(12, 5, 20, 8, 15, 0, 25));
 
 export default getNumbersAverage;

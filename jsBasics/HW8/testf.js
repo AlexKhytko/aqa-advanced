@@ -43,6 +43,7 @@
        }
     var carAlex = myCar ("Honda", "Accord", 1998);
    var carBob = myCar ("BMW", "535", 2005);
+   
 //функция конструктор
 function HisCar (name, model, year) {
     this.name = name;
